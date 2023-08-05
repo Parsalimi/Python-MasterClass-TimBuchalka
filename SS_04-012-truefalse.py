@@ -7,3 +7,21 @@
 # else:
 #     print("Study Python")
 
+if 0:
+    print("True")
+else:
+    print("False")
+
+name = input("Please Enter your name: ")
+
+if name:
+    print("Hello, {}".format(name))
+else:
+    print("Are you the man with no name?")
+
+print("-" * 25)
+
+if name != "":
+    print("Hello, {}".format(name))
+else:
+    print("Are you the man with no name?")
