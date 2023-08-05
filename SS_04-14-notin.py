@@ -4,3 +4,5 @@ if "cinema" not in acctivity.casefold(): # casefold() funcation makes the string
     print("But I want to go to the cinema")
 else:
     print("Let's go cinema together")
+
+# to Learn more https://docs.python.org/3/library/stdtypes.html
