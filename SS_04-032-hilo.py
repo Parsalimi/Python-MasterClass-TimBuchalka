@@ -16,7 +16,10 @@ while True:
     elif high_low == "l":
         high = guess - 1
     elif high_low == "c":
-        print("I got it in {}th guesses!".format(round_played))  # TODO: Fix it
+        print("I got it in {}th guesses!".format(round_played))
         break
     else:
         print("please enter h, l or c")
+        #Augmented Assignment
+        #round_played = round_played - 1
+        round_played -= 1
