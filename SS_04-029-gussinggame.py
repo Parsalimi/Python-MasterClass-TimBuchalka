@@ -1,23 +1,26 @@
 import random
 
-highest = 50
+highest = 1000
 answer = random.randint(1, highest)
 wining_status = False
-round_played = 0
-print(answer) # TODO: remove after testing
+round_played = 1
+print(answer)
 
-guess = int(input("Please guess a number between 1 and {}: ".format(highest)))
-while not wining_status:
-    round_played += 1
+print("YOU ONLY HAVE 10 GUESS")
+guess = int(input("1. Please guess a number between 1 and {}: ".format(highest)))
+
+while not round_played > 9:
     if guess == 0:
-        print("QUITED!!!")
-        wining_status = True
+        print("{}. QUITED!!!".format(round_played))
+        break
     else:
         if guess == answer:
-            print("You got it {}th time".format(round_played)) #TODO: First time
-            wining_status = True
+            print("You got it {}th time".format(round_played))
+            break
         elif guess > answer:
-            guess = int(input("Please guess lower: "))
+            guess = int(input("{}. Please guess lower: ".format(round_played + 1)))
         else:
-            guess = int(input("Please guess higher: "))
+            guess = int(input("{}. Please guess higher: ".format(round_played + 1)))
+    round_played += 1
 
+print("You didn't guess it")
