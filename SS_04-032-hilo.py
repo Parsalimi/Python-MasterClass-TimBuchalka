@@ -5,7 +5,7 @@ print("Please think of a number between {} and {}".format(low, high))
 round_played = 0
 
 guess = 1
-while True:
+while low != high:
     round_played += 1
     guess = low + (high - low) // 2
     high_low = input("{}. My guess is {}. Should I guess higher or lower?"
@@ -20,6 +20,6 @@ while True:
         break
     else:
         print("please enter h, l or c")
-        #Augmented Assignment
-        #round_played = round_played - 1
         round_played -= 1
+else:
+    print("Your number is: {}".format(low))
