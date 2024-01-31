@@ -11,7 +11,15 @@ data = [4, 5, 104, 105, 110, 120, 130, 150,
 min_valid = 100
 max_valid = 200
 
+start = 0
 for index, value in enumerate(data):
-    if (value < min_valid) or (value > max_valid):
-        del data[index]
-print(data)
+        if value >= min_valid:
+                start = index
+                break
+stop = 0
+for index in range(len(data) - 1, -1, -1):
+        if data[index] <= max_valid:
+                stop = index + 1
+                break
+
+print(data[start:stop])
