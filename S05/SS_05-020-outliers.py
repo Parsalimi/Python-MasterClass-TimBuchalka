@@ -23,3 +23,5 @@ for index in range(len(data) - 1, -1, -1):
                 break
 
 print(data[start:stop])
+
+
